@@ -73,11 +73,11 @@ Migrating from Paperless-ng is easy, just drop in the new docker image! See the 
 
 The documentation for Paperless-ngx is available at [https://docs.paperless-ngx.com](https://docs.paperless-ngx.com/).
 
-## Docker Backup
+# Docker Backup
 ```bash
 cd ~/paperless-ngx/paperless-ngx
 docker-compose exec -T webserver document_exporter ../export
-tar -cvzf ../backup/2024-09-04_backup.tar.gz export/
+tar -cvzf ../backup/$(date '+%Y-%m-%d')_backup.tar.gz export/
 ```
 
 # Contributing
